@@ -1,0 +1,6 @@
+*.substvars
+*debhelper*
+.debhelper
+bpf-linker
+files
+tmp
