@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_auto_build:
+	RUSTC_BOOTSTRAP=1 \
+	cargo build --locked --offline --release --no-default-features --features llvm-21
+
+override_dh_auto_install:
+	install -Dpm755 -d debian/tmp/usr/bin
+	install -Dpm755 -t debian/tmp/usr/bin target/release/bpf-linker
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+override_dh_clean:
+
+%:
+	dh $@

@@ -1,0 +1,4 @@
+bpf-linker source: file-without-copyright-information
+bpf-linker source: no-debian-changes
+bpf-linker source: no-debian-copyright-in-source
+bpf-linker source: source-contains-prebuilt-ms-help-file
